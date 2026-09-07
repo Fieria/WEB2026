@@ -3,11 +3,12 @@
 ## Задание 1
 <img width="1745" height="315" alt="image" src="https://github.com/user-attachments/assets/7d491d5d-2ccd-4b1e-a88b-ea4afdfde065" />
 
+`url`: https://d5dtovk2o8j7na734bpe.g4vq2kuy.apigw.yandexcloud.net
+
 создание шлюза 
 
 <img width="1181" height="488" alt="image" src="https://github.com/user-attachments/assets/e0237980-22d8-4c85-bb69-678eeb4bed20" />
 
-`url`: https://d5dtovk2o8j7na734bpe.g4vq2kuy.apigw.yandexcloud.net
 
 * `servers.url` — задаёт адрес шлюза (`https://d5dtovk2o8j7na734bpe.apigw.yandexcloud.net`), через который ресурс доступен по HTTPS
 * `paths: /` → `get` — описывает обработку GET-запроса к корневому маршруту
@@ -28,6 +29,7 @@
 
 <img width="1761" height="392" alt="image" src="https://github.com/user-attachments/assets/211c23b9-7ede-4a86-9a33-aba086356fa5" />
 
+`url`: https://d5dtovk2o8j7na734bpe.g4vq2kuy.apigw.yandexcloud.net
 
 обновляем спецификацию шлюза, добавляем следующие пути:
 
@@ -41,3 +43,22 @@
 
 
 ## Задание 3
+
+<img width="1799" height="739" alt="image" src="https://github.com/user-attachments/assets/df118f41-ac22-4999-8696-15e99ffc410c" />
+
+`url`: https://d5dtovk2o8j7na734bpe.g4vq2kuy.apigw.yandexcloud.net
+
+обновляем спецификацию шлюза, добавляем пути `/promise/` и `/fetch/` :
+
+<img width="1295" height="502" alt="image" src="https://github.com/user-attachments/assets/d920fddf-85e4-4457-afb7-74ecbf2ad9e0" />
+
+
+<img width="1251" height="603" alt="image" src="https://github.com/user-attachments/assets/ad2651c1-2035-491d-9f65-d646578d3321" />
+<img width="1238" height="169" alt="image" src="https://github.com/user-attachments/assets/c77d78aa-1082-4660-8813-09808ceb599a" />
+
+проверка
+
+<img width="1236" height="52" alt="image" src="https://github.com/user-attachments/assets/b278b049-6a92-4e76-908f-1345218c2006" />
+<img width="1339" height="249" alt="image" src="https://github.com/user-attachments/assets/2b705335-1f99-46bb-b3e2-9a7635fe270f" />
+
+
