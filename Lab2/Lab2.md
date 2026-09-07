@@ -4,8 +4,6 @@
 
 <img width="1757" height="681" alt="image" src="https://github.com/user-attachments/assets/de61b736-1355-4fe8-b94d-196e5683a773" />
 
-`url` : https://fuchsia-pesky-sandbox--polinaoleynik.replit.app
-
 
 Я делала задание на Replit. Для начала я попросила агента создать шаблон Node.js, потом поменяла код server.js (см фото ниже). Полный скрипт в файле task4_server.js
 <img width="1916" height="1035" alt="image" src="https://github.com/user-attachments/assets/f0357ebe-e3cd-4369-bbda-8b819f33cd4a" />
@@ -19,3 +17,15 @@
 
 
 ## Задание 5
+
+<img width="1714" height="135" alt="image" src="https://github.com/user-attachments/assets/e314dd9c-8552-4f14-9fcd-36a08d10aae0" />
+
+
+Полный скрипт в файле task5_server.js
+<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/ca770398-48f0-446a-b5e8-2578238900f4" />
+
+* Сервер  написан на встроенном модуле `node:http`, без сторонних библиотек.
+* Функции `pad` и `todayDDMMYYYY` вычисляют текущую дату сервера и форматируют её в виде `DD-MM-YYYY` (с ведущими нулями у дня и месяца).
+* Маршрут (А) распознаётся регулярным выражением `/^\/\d{6}$/`, которое проверяет, что путь состоит ровно из 6 цифр (например, `/021023`). При совпадении сервер возвращает JSON с полем `date` (сегодняшняя дата, вычисленная на сервере, а не взятая из URL) и полем `login` (значение константы `LOGIN`), а также заголовок `Content-Type: application/json`.
+* Маршрут (Б) распознаётся регулярным выражением `/^\/api\/rv\/([a-z]+)$/`, которое требует после `/api/rv/` одну или более строчных латинских букв и захватывает их в группу. Строка из этой группы переворачивается через `split('').reverse().join('')` и возвращается как обычный текст (`text/plain`).
+* Любой путь, не подошедший ни под один из этих двух шаблонов, возвращает `404` с JSON-сообщением об ошибке.
