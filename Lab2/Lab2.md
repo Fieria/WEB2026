@@ -4,6 +4,8 @@
 
 <img width="1757" height="681" alt="image" src="https://github.com/user-attachments/assets/de61b736-1355-4fe8-b94d-196e5683a773" />
 
+`url` : https://fuchsia-pesky-sandbox--polinaoleynik.replit.app
+
 
 Я делала задание на Replit. Для начала я попросила агента создать шаблон Node.js, потом поменяла код server.js (см фото ниже). Полный скрипт в файле task4_server.js
 <img width="1916" height="1035" alt="image" src="https://github.com/user-attachments/assets/f0357ebe-e3cd-4369-bbda-8b819f33cd4a" />
