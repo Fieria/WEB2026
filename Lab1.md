@@ -26,5 +26,18 @@
 
 ## Задание 2
 
+<img width="1761" height="392" alt="image" src="https://github.com/user-attachments/assets/211c23b9-7ede-4a86-9a33-aba086356fa5" />
+
+
+обновляем спецификацию шлюза, добавляем следующие пути:
+
+<img width="981" height="606" alt="image" src="https://github.com/user-attachments/assets/86990cd4-ea93-4ef8-ba51-80c737afe7e9" />
+
+проверка
+
+<img width="1208" height="544" alt="image" src="https://github.com/user-attachments/assets/a1d4907e-a312-4c9a-84c4-56fb6839d5a5" />
+
+<img width="1183" height="566" alt="image" src="https://github.com/user-attachments/assets/e54ef155-cd56-4443-9d44-e42a0e56acd0" />
+
 
 ## Задание 3
