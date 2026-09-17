@@ -5,43 +5,56 @@ export default function (express, bodyParser, createReadStream, crypto, http) {
   app.use(bodyParser.json());
 
   app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,OPTIONS,DELETE');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,POST,PUT,DELETE,OPTIONS",
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "x-test,ngrok-skip-browser-warning,Content-Type,Accept,Access-Control-Allow-Headers",
+    );
+    res.setHeader("X-Author", "polinaoleynik");
+
+    if (req.method === "OPTIONS") {
+      return res.sendStatus(204);
+    }
+
     next();
   });
 
-  app.get('/login/', function (req, res) {
-    res.send('polinaoleynik');
+  app.all("/login/", function (req, res) {
+    res.send("polinaoleynik");
   });
 
-  app.get('/code/', function (req, res) {
+  app.all("/code/", function (req, res) {
     const filePath = import.meta.url.substring(7);
     createReadStream(filePath).pipe(res);
   });
 
-  app.get('/sha1/:input/', function (req, res) {
-    const hash = crypto.createHash('sha1').update(req.params.input).digest('hex');
+  app.all("/sha1/:input/", function (req, res) {
+    const hash = crypto
+      .createHash("sha1")
+      .update(req.params.input)
+      .digest("hex");
     res.send(hash);
   });
 
-  function handleReq(req, res) {
-    const addr = req.method === 'GET' ? req.query.addr : req.body.addr;
+  app.all("/req/", function (req, res) {
+    const addr = req.query.addr || (req.body && req.body.addr);
     http.get(addr, function (resp) {
-      let data = '';
-      resp.on('data', function (chunk) {
+      let data = "";
+      resp.on("data", function (chunk) {
         data += chunk;
       });
-      resp.on('end', function () {
+      resp.on("end", function () {
         res.send(data);
       });
     });
-  }
+  });
 
-  app.get('/req/', handleReq);
-  app.post('/req/', handleReq);
-
-  app.all('*', function (req, res) {
-    res.send('polinaoleynik');
+  app.all("*", function (req, res) {
+    res.send("polinaoleynik");
   });
 
   return app;
